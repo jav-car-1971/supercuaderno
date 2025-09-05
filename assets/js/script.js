@@ -113,7 +113,7 @@ function generateCategoryCloud() {
   const allCategories = new Set();
   searchIndex.forEach(doc => {
     if (doc.category) {
-      allCategories.add(doc.category);
+      doc.category.forEach(cat => allCategories.add(cat));
     }
   });
 
@@ -150,9 +150,12 @@ function generateGlobalTags() {
 
 // Genera la vista para una categoría específica.
 // Filtra los posts por la categoría y crea una lista de sumarios.
-function generateCategoryView(categoryName) {
-  const categoryPosts = searchIndex.filter(post => post.category && post.category.toLowerCase().replace(/\s+/g, '-') === categoryName);
-  const title = categoryPosts.length > 0 ? categoryPosts[0].category : categoryName;
+function generateCategoryView(categoryId) {
+  const categoryPosts = searchIndex.filter(post => 
+      post.category && post.category.some(cat => cat.toLowerCase().replace(/\s+/g, '-') === categoryId)
+  );
+  
+  const title = categoryPosts.length > 0 ? categoryPosts[0].category.find(cat => cat.toLowerCase().replace(/\s+/g, '-') === categoryId) : categoryId;
   let html = `<h1>${title}</h1>`;
 
   if (categoryPosts.length > 0) {
@@ -179,7 +182,7 @@ function generateCategoryView(categoryName) {
   }
 
   contentEl.innerHTML = html;
-  generateBreadcrumbs(`category/${categoryName}`);
+  generateBreadcrumbs(`category/${categoryId}`);
 }
 
 // Lógica principal para cargar el contenido de la página.
@@ -215,13 +218,14 @@ async function loadPage(page) {
     if (filteredResults.length > 0) {
         filteredResults.forEach(item => {
             const readingTime = Math.ceil(item.word_count / 160);
-            // Agregado: Enlace a la categoría en la vista de etiquetas
-            const categoryLink = item.category ? `<span>Categoría: <a href="#category/${item.category.toLowerCase().replace(/\s+/g, '-')}" class="category-link">${item.category}</a></span>` : '';
+            const categoryLinks = item.category.map(cat => 
+              `<span>Categoría: <a href="#category/${cat.toLowerCase().replace(/\s+/g, '-')}" class="category-link">${cat}</a></span>`
+            ).join('');
             resultsHTML += `
                 <li>
                     <h2><a href="#${item.id}">${item.title}</a></h2>
                     <p class="post-meta">
-                      ${categoryLink}
+                      ${categoryLinks}
                       <span>📅 ${item.date}</span>
                       <span>⏳ ${readingTime} min de lectura</span>
                     </p>
@@ -253,9 +257,13 @@ async function loadPage(page) {
     let postMetaHtml = '';
     if (postData) {
       const readingTime = Math.ceil(postData.word_count / 160);
+      const categoryLinks = postData.category.map(cat => 
+          `<a href="#category/${cat.toLowerCase().replace(/\s+/g, '-')}" class="category-link">${cat}</a>`
+      ).join(', ');
+      
       postMetaHtml = `
         <p class="post-meta">
-          <span>Categoría: <a href="#category/${postData.category.toLowerCase().replace(/\s+/g, '-')}" class="category-link">${postData.category}</a></span>
+          <span>Categoría: ${categoryLinks}</span>
           <span>Fecha: ${postData.date}</span>
           <span>Lectura: ${readingTime} min</span>
         </p>
@@ -323,7 +331,7 @@ function generateBreadcrumbs(page) {
     const subPage = parts[1];
     
     const post = searchIndex.find(p => p.id === page);
-    let categoryTitle = post && post.category ? post.category : categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace('-', ' ');
+    let categoryTitle = post && post.category ? post.category[0] : categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace('-', ' ');
     
     breadcrumbText += ` > <a href="#category/${categoryName}">${categoryTitle}</a>`;
     
@@ -458,3 +466,5 @@ window.addEventListener("DOMContentLoaded", () => {
   const initialPage = window.location.hash.substring(1) || "inicio";
   loadPage(initialPage);
 });
+
+// Version actualizada al 5/9/2025 19:20 hs

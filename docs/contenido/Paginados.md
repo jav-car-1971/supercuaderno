@@ -7,4 +7,4 @@ tags: ["unacosa", "otracosa", "otracosamas", "Open Source", "Control de Versione
 draft: false
 ---
 
-la bla bla bla
+el contenido de la pagina dos

@@ -1,6 +1,6 @@
 # *Cuaderno de apuntes*
 -
-
+**Versión 2.5 del 5/9/2025 19:38 hs**
 ## Características principales
 
 - ✅ Tema claro/oscuro
