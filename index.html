@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Cuaderno</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-coy.min.css" rel="stylesheet">
+</head>
+<body>
+
+<aside>
+    <h2>Índice</h2>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar...">
+        <ul id="searchResults"></ul>
+    </div>
+    
+    <nav id="menu">
+        <a href="#inicio" class="nav-item active">Inicio</a>
+
+        <div class="category">
+            <a href="#contenido/index" class="nav-item">Contenido</a>
+            <span class="toggle-icon">+</span>
+        </div>
+        <ul class="submenu">
+            <li><a href="#contenido/subtema1">Subtema 1</a></li>
+            <li><a href="#contenido/subtema2">Subtema 2</a></li>
+            <li><a href="#contenido/git">GIT</a></li>
+            <li><a href="#contenido/sitiosestaticos">Sitios Estáticos</a></li>
+        </ul>
+        <div class="category">
+            <a href="#novedades/index" class="nav-item">Novedades</a>
+            <span class="toggle-icon">+</span>
+        </div>
+        <ul class="submenu">
+            <li><a href="#novedades/20250809">9/8/2025</a></li>
+            <li><a href="#novedades/20250808">8/8/2025</a></li>
+            <li><a href="#novedades/20250807">7/8/2025</a></li>
+            <li><a href="#novedades/20250309">9/3/2025</a></li>
+        </ul>
+        
+        <a href="#creditos" class="nav-item">Créditos</a>
+    </nav>
+    
+    <div id="global-categories-container"></div>
+    <div id="global-tags-container"></div>
+    
+    <button id="toggle-theme">🌙☀️</button>
+</aside>
+  
+<main>
+    <div id="breadcrumbs"></div>
+    <div id="main-content-container">
+        <div id="content"></div>
+        <div id="toc"></div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
