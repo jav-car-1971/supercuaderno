@@ -1,0 +1,129 @@
+[
+  {
+    "id": "creditos",
+    "title": "Creditos",
+    "date": "",
+    "summary": "",
+    "category": "Sin Categoría",
+    "tags": [],
+    "word_count": 44
+  },
+  {
+    "id": "inicio",
+    "title": "Inicio",
+    "date": "",
+    "summary": "",
+    "category": "Sin Categoría",
+    "tags": [],
+    "word_count": 39
+  },
+  {
+    "id": "contenido\\sitiosestaticos",
+    "title": "Sitios Web Estáticos - Una breve Introducción",
+    "date": "2025-08-19",
+    "summary": "Un documento exhaustivo que define los sitios web estáticos, los diferencia de los dinámicos y detalla las herramientas, implementaciones y metodologías modernas, con un enfoque en los conceptos fundamentales.",
+    "category": "Desarrollo Web",
+    "tags": [
+      "sitios estaticos",
+      "web",
+      "frontmatter",
+      "hugo",
+      "git",
+      "netlify",
+      "vercel",
+      "github"
+    ],
+    "word_count": 1244
+  },
+  {
+    "id": "contenido\\subtema1",
+    "title": "Bla bla bla uno",
+    "date": "2025-08-18",
+    "summary": "Una bla bla bla sobre uno.",
+    "category": "Desarrollo de algo",
+    "tags": [
+      "unacosa",
+      "otracosa",
+      "otracosamas",
+      "Open Source",
+      "Control de Versiones",
+      "Flujo de Trabajo"
+    ],
+    "word_count": 4
+  },
+  {
+    "id": "contenido\\subtema2",
+    "title": "muy diferete",
+    "date": "2025-08-18",
+    "summary": "Unaca texto diferente",
+    "category": "Desarrollo de Software",
+    "tags": [
+      "otro",
+      "unacosa",
+      "otroejemploHugo",
+      "Open Source",
+      "Control de Versiones",
+      "Flujo de Trabajo"
+    ],
+    "word_count": 2
+  },
+  {
+    "id": "novedades\\20250309",
+    "title": "Documentación del Proyecto de actualización",
+    "date": "2025-09-03",
+    "summary": "Aquí va un breve resumen del post, que luego aparecerá en la página principal de la categoría.",
+    "category": "Novedades",
+    "tags": [
+      "arquitectura",
+      "sitios-estaticos",
+      "busqueda",
+      "python",
+      "javascript",
+      "desarrollo"
+    ],
+    "word_count": 723
+  },
+  {
+    "id": "novedades\\20250807",
+    "title": "Título de tu Post",
+    "date": "2025-09-03",
+    "summary": "Un resumen breve de tu post. Esto aparecerá en las listas de categoría y búsqueda.",
+    "category": "Novedades",
+    "tags": [
+      "etiqueta1",
+      "etiqueta2",
+      "etc"
+    ],
+    "word_count": 92
+  },
+  {
+    "id": "novedades\\20250808",
+    "title": "Documentación del Proyecto de actualización",
+    "date": "2025-09-03",
+    "summary": "Un breve resumen del post. Este es el texto que se mostrará en las vistas de categorías y búsqueda.",
+    "category": "Novedades",
+    "tags": [
+      "arquitectura",
+      "sitios-estaticos",
+      "busqueda",
+      "python",
+      "javascript",
+      "desarrollo"
+    ],
+    "word_count": 92
+  },
+  {
+    "id": "novedades\\20250809",
+    "title": "Cómo Formatear un Texto con Markdown",
+    "date": "2025-08-08",
+    "summary": "Una guía completa sobre cómo formatear texto, crear títulos, listas, enlaces y bloques de código usando la sintaxis de Markdown.",
+    "category": "Desarrollo Web",
+    "tags": [
+      "markdown",
+      "formato de texto",
+      "sintaxis",
+      "guia"
+    ],
+    "word_count": 322
+  }
+]
