@@ -7,7 +7,7 @@
 
 body {
   display: flex;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
@@ -21,6 +21,8 @@ body {
   --sidebar-bg: #f4f4f4;
   --submenu-bg: #e9e9e9;
   --submenu-bg-2: #dcdcdc;
+  --font-family: 'Inter', sans-serif;
+  --base-font-size: 16px;
 }
 
 body.dark {
@@ -30,7 +32,9 @@ body.dark {
   --submenu-bg: #3c3c3c;
   --submenu-bg-2: #4a4a4a;
 }
-
+html {
+    font-size: var(--base-font-size);
+}
 aside {
   background: var(--sidebar-bg);
   padding: 1rem;
@@ -107,21 +111,52 @@ aside nav a.active {
   background: var(--submenu-bg-2);
 }
 
+/* Nuevos estilos para los controles superiores */
+.top-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 #toggle-theme {
-  margin-top: auto; /* Empuja el botón al final del aside */
   width: 100%;
   padding: 0.5rem;
   cursor: pointer;
   background: none;
-  border: none;
+  border: 1px solid var(--text);
   font-size: 1.5rem;
   text-align: center;
+  border-radius: 5px;
 }
 
 #toggle-theme:hover {
   opacity: 0.8;
 }
 
+.font-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#font-selector {
+    flex-grow: 1;
+    padding: 0.3rem;
+    border: 1px solid var(--text);
+    background: var(--bg);
+    color: var(--text);
+    border-radius: 5px;
+}
+
+.font-size-buttons button {
+    padding: 0.2rem 0.5rem;
+    background: var(--submenu-bg);
+    border: 1px solid var(--text);
+    color: var(--text);
+    cursor: pointer;
+    border-radius: 5px;
+}
 main {
   flex: 1;
   padding: 2rem;
@@ -283,4 +318,24 @@ code {
 .category-link::before {
     content: '📁'; /* Símbolo de carpeta */
     margin-right: 0.3rem;
+}
+
+/* Nuevo estilo para los resultados de búsqueda */
+.search-result-link {
+    display: inline-block;
+    background-color: var(--submenu-bg);
+    color: var(--text);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.search-result-link::before {
+    content: '🔎'; /* Símbolo de lupa */
+    margin-right: 0.3rem;
+}
+.search-result-link:hover {
+    background-color: var(--submenu-bg-2);
 }

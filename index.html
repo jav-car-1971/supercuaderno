@@ -13,6 +13,25 @@
 <body>
 
 <aside>
+    <div class="top-controls">
+        <button id="toggle-theme">🌙☀️</button>
+        <div class="font-controls">
+            <select id="font-selector">
+                <option value="Inter, sans-serif">Inter (Predeterminada)</option>
+                <option value="Times New Roman, serif">Times New Roman</option>
+                <option value="Garamond, serif">Garamond</option>
+                <option value="Bookman Old Style, serif">Bookman Old Style</option>
+                <option value="Comic Sans MS, cursive">Comic Sans MS</option>
+                <option value="Courier New, monospace">Courier New</option>
+                <option value="Brush Script MT, cursive">Brush Script MT</option>
+            </select>
+            <div class="font-size-buttons">
+                <button id="increase-font">A+</button>
+                <button id="decrease-font">A-</button>
+            </div>
+        </div>
+    </div>
+    
     <h2>Índice</h2>
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Buscar...">
@@ -49,9 +68,8 @@
     <div id="global-categories-container"></div>
     <div id="global-tags-container"></div>
     
-    <button id="toggle-theme">🌙☀️</button>
 </aside>
-  
+ 
 <main>
     <div id="breadcrumbs"></div>
     <div id="main-content-container">
@@ -64,4 +82,4 @@
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
-</html>
+</html> 

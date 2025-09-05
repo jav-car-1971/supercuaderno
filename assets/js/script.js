@@ -9,6 +9,11 @@ const searchInput = document.getElementById("searchInput");
 const searchResultsEl = document.getElementById("searchResults");
 const globalCategoriesContainer = document.getElementById("global-categories-container");
 const globalTagsContainer = document.getElementById("global-tags-container");
+
+// Nuevos elementos para el control de fuentes
+const fontSelector = document.getElementById("font-selector");
+const increaseFontBtn = document.getElementById("increase-font");
+const decreaseFontBtn = document.getElementById("decrease-font");
 let searchIndex = [];
 
 // Función para cargar el índice de búsqueda (search_index.json)
@@ -41,6 +46,39 @@ if (localStorage.getItem("theme") === "dark" ||
 themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+});
+
+// Lógica para el cambio de fuente y tamaño
+if (localStorage.getItem('fontFamily')) {
+    document.body.style.fontFamily = localStorage.getItem('fontFamily');
+    fontSelector.value = localStorage.getItem('fontFamily');
+}
+if (localStorage.getItem('fontSize')) {
+    document.documentElement.style.setProperty('--base-font-size', localStorage.getItem('fontSize') + 'px');
+}
+
+fontSelector.addEventListener('change', (e) => {
+    const selectedFont = e.target.value;
+    document.body.style.fontFamily = selectedFont;
+    localStorage.setItem('fontFamily', selectedFont);
+});
+
+increaseFontBtn.addEventListener('click', () => {
+    let currentSize = parseInt(getComputedStyle(document.documentElement).fontSize);
+    if (currentSize < 24) {
+        currentSize += 2;
+        document.documentElement.style.setProperty('--base-font-size', currentSize + 'px');
+        localStorage.setItem('fontSize', currentSize);
+    }
+});
+
+decreaseFontBtn.addEventListener('click', () => {
+    let currentSize = parseInt(getComputedStyle(document.documentElement).fontSize);
+    if (currentSize > 12) {
+        currentSize -= 2;
+        document.documentElement.style.setProperty('--base-font-size', currentSize + 'px');
+        localStorage.setItem('fontSize', currentSize);
+    }
 });
 
 // Función para parsear el frontmatter de un archivo Markdown.
@@ -317,15 +355,15 @@ function handleSearch() {
     (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query)))
   );
 
-  let resultsHTML = '<h3>Resultados</h3><ul>';
+  let resultsHTML = '';
   if (results.length > 0) {
     results.forEach(item => {
-      resultsHTML += `<li><a href="#${item.id}">${item.title}</a></li>`;
+      // Cambio aquí: Usamos el nuevo estilo 'search-result-link'
+      resultsHTML += `<li><a href="#${item.id}" class="search-result-link">${item.title}</a></li>`;
     });
   } else {
     resultsHTML += `<li>No se encontraron resultados.</li>`;
   }
-  resultsHTML += '</ul>';
   searchResultsEl.innerHTML = resultsHTML;
 }
 
