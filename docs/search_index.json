@@ -19,63 +19,7 @@
       "Sin Categoría"
     ],
     "tags": [],
-    "word_count": 39
-  },
-  {
-    "id": "contenido\\Paginados",
-    "title": "Bla bla bla uno",
-    "date": "2025-08-18",
-    "summary": "Una bla bla bla sobre uno.",
-    "category": [
-      "Desarrollo de algo"
-    ],
-    "tags": [
-      "unacosa",
-      "otracosa",
-      "otracosamas",
-      "Open Source",
-      "Control de Versiones",
-      "Flujo de Trabajo"
-    ],
-    "word_count": 6
-  },
-  {
-    "id": "contenido\\Paginatres",
-    "title": "muy diferete",
-    "date": "2025-08-18",
-    "summary": "Unaca texto diferente",
-    "category": [
-      "Desarrollo de Software"
-    ],
-    "tags": [
-      "otro",
-      "unacosa",
-      "otroejemploHugo",
-      "Open Source",
-      "Control de Versiones",
-      "Flujo de Trabajo"
-    ],
-    "word_count": 8
-  },
-  {
-    "id": "contenido\\Paginauno",
-    "title": "Sitios Web Estáticos - Una breve Introducción",
-    "date": "2025-08-19",
-    "summary": "Un documento exhaustivo que define los sitios web estáticos, los diferencia de los dinámicos y detalla las herramientas, implementaciones y metodologías modernas, con un enfoque en los conceptos fundamentales.",
-    "category": [
-      "Desarrollo Web"
-    ],
-    "tags": [
-      "sitios estaticos",
-      "web",
-      "frontmatter",
-      "hugo",
-      "git",
-      "netlify",
-      "vercel",
-      "github"
-    ],
-    "word_count": 11
+    "word_count": 45
   },
   {
     "id": "novedades\\20250101",
@@ -192,5 +136,61 @@
       "tag1"
     ],
     "word_count": 36
+  },
+  {
+    "id": "paginas\\Paginados",
+    "title": "Bla bla bla uno",
+    "date": "2025-08-18",
+    "summary": "Una bla bla bla sobre uno.",
+    "category": [
+      "Desarrollo de algo"
+    ],
+    "tags": [
+      "unacosa",
+      "otracosa",
+      "otracosamas",
+      "Open Source",
+      "Control de Versiones",
+      "Flujo de Trabajo"
+    ],
+    "word_count": 6
+  },
+  {
+    "id": "paginas\\Paginatres",
+    "title": "muy diferete",
+    "date": "2025-08-18",
+    "summary": "Unaca texto diferente",
+    "category": [
+      "Desarrollo de Software"
+    ],
+    "tags": [
+      "otro",
+      "unacosa",
+      "otroejemploHugo",
+      "Open Source",
+      "Control de Versiones",
+      "Flujo de Trabajo"
+    ],
+    "word_count": 8
+  },
+  {
+    "id": "paginas\\Paginauno",
+    "title": "Sitios Web Estáticos - Una breve Introducción",
+    "date": "2025-08-19",
+    "summary": "Un documento exhaustivo que define los sitios web estáticos, los diferencia de los dinámicos y detalla las herramientas, implementaciones y metodologías modernas, con un enfoque en los conceptos fundamentales.",
+    "category": [
+      "Desarrollo Web"
+    ],
+    "tags": [
+      "sitios estaticos",
+      "web",
+      "frontmatter",
+      "hugo",
+      "git",
+      "netlify",
+      "vercel",
+      "github"
+    ],
+    "word_count": 11
   }
 ]

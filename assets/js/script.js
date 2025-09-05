@@ -247,7 +247,8 @@ async function loadPage(page) {
   }
 
   try {
-    const res = await fetch(`docs/${page}.md`);
+    const pageToFetch = page.replace('contenido', 'paginas');
+    const res = await fetch(`docs/${pageToFetch}.md`);
     if (!res.ok) throw new Error("Página no encontrada");
     const md = await res.text();
     const { data, content } = parseMarkdown(md);
@@ -331,7 +332,14 @@ function generateBreadcrumbs(page) {
     const subPage = parts[1];
     
     const post = searchIndex.find(p => p.id === page);
-    let categoryTitle = post && post.category ? post.category[0] : categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace('-', ' ');
+    let categoryTitle = "";
+    if (categoryName === "paginas") {
+        categoryTitle = "Páginas";
+    } else if (post && post.category) {
+        categoryTitle = post.category[0];
+    } else {
+        categoryTitle = categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace('-', ' ');
+    }
     
     breadcrumbText += ` > <a href="#category/${categoryName}">${categoryTitle}</a>`;
     
@@ -467,4 +475,4 @@ window.addEventListener("DOMContentLoaded", () => {
   loadPage(initialPage);
 });
 
-// Version actualizada al 5/9/2025 19:20 hs
+// Version actualizada al 5/9/2025 20:13
