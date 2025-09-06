@@ -1,11 +1,10 @@
 ---
-title: "muy diferete"
-date: 2025-08-18
-summary: "Unaca texto diferente"
-category: "Desarrollo de Software"
+title: "Problemitas"
+date: 2025-09-06
+summary: "Una reseña de los defectos o limitaciones que tiene la versión"
+category: ["Desarrollo de Software", "documentación"]
 tags: ["otro", "unacosa", "otroejemploHugo", "Open Source", "Control de Versiones", "Flujo de Trabajo"]
 draft: false
 ---
 
-
-Este es el contenido de la paigna tres
+Aqí una reseña de los errores o problemas que se detectaron en esta versión
