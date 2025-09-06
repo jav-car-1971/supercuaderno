@@ -6,6 +6,6 @@ category: ["Desarrollo Web", "Open Source"]
 tags: ["sitios estaticos", "web", "frontmatter"]
 draft: false
 ---
-# ¿Qué es 'Súper Cuaderno'?
+# Qué es Súper Cuaderno
 
 Aqui una breve descripción del proyecto.
