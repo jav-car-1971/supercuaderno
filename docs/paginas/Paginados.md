@@ -1,10 +1,10 @@
 ---
-title: "Bla bla bla uno"
-date: 2025-08-18
-summary: "Una bla bla bla sobre uno."
-category: "Desarrollo de algo"
-tags: ["unacosa", "otracosa", "otracosamas", "Open Source", "Control de Versiones", "Flujo de Trabajo"]
+title: "Características Principales"
+date: 2025-9-6
+summary: "Un breve resumen sobre las principales características"
+category: "Desarrollo WEB"
+tags: ["etiquetas", "Flujo de Trabajo", "categorias"]
 draft: false
 ---
 
-el contenido de la pagina dos
+Aqui irian una descripción de algunas características.
