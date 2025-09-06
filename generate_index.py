@@ -94,5 +94,6 @@ def generate_index():
                     })
 
     # Guardar el índice en un archivo JSON
-        with open(INDEX_FILE, "w", encoding="utf-8") as f:
+               with open(INDEX_FILE, "w", encoding="utf-8") as f:
+
 
