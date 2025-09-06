@@ -94,6 +94,13 @@ def generate_index():
                     })
 
     # Guardar el índice en un archivo JSON
-               with open(INDEX_FILE, "w", encoding="utf-8") as f:
+    with open(INDEX_FILE, "w", encoding="utf-8") as f:
+        json.dump(search_index, f, ensure_ascii=False, indent=2)
 
+    print("Índice de búsqueda generado exitosamente.")
+    print(f"Archivos procesados: {len(search_index)}")
 
+if __name__ == "__main__":
+    generate_index()
+
+# Version actualizada al 6/9/2025 12:45 hs
