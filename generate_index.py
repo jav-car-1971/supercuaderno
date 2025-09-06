@@ -34,7 +34,7 @@ def parse_markdown(md_content):
                 key = key.strip()
                 value = value.strip()
                 
-                # Manejar los diferentes tipos de datos
+                # Manejar los diferentes tipos de datos, incluyendo arrays de tags sin comillas
                 if value.startswith('[') and value.endswith(']'):
                     data[key] = [v.strip().replace('"', '') for v in value[1:-1].split(',')]
                 elif value.startswith('"') and value.endswith('"'):
@@ -94,13 +94,4 @@ def generate_index():
                     })
 
     # Guardar el índice en un archivo JSON
-    with open(INDEX_FILE, "w", encoding="utf-8") as f:
-        json.dump(search_index, f, ensure_ascii=False, indent=2)
-
-    print("Índice de búsqueda generado exitosamente.")
-    print(f"Archivos procesados: {len(search_index)}")
-
-if __name__ == "__main__":
-    generate_index()
-
-# Version actualizada al 5/9/2025 19:20 hs    
+    with open(INDEX_FILE, "w", encoding="utf
