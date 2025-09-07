@@ -10,8 +10,9 @@ draft: false
 * Versión anterior y posterior actualización.
 
 ## Versión anterior
+
 ```yaml
-\# Simple workflow for deploying static content to GitHub Pages
+# Simple workflow for deploying static content to GitHub Pages
 
 name: Deploy static content to Pages
 
