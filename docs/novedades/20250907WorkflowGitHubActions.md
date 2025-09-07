@@ -1,7 +1,7 @@
 ---
 title: "Documentación del Workflow de GitHub Actions y Python"
 date: 2025-09-07
-category: \["Automatización"]
+category: ["Automatización"]
 tags: ["github-actions", "workflow", "python", "documentacion", "automatizacion"]
 draft: false
 ---
@@ -12,7 +12,7 @@ draft: false
 ## Versión anterior
 ```yaml
 
-\# Simple workflow for deploying static content to GitHub Pages
+# Simple workflow for deploying static content to GitHub Pages
 
 name: Deploy static content to Pages
 
@@ -28,7 +28,7 @@ on:
 
   workflow\_dispatch:
 
-\# Sets permissions of the GITHUB\_TOKEN to allow deployment to GitHub Pages
+# Sets permissions of the GITHUB\_TOKEN to allow deployment to GitHub Pages
 
 permissions:
 
@@ -38,9 +38,9 @@ permissions:
 
   id-token: write
 
-\# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 
-\# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 
 concurrency:
 
@@ -88,9 +88,6 @@ jobs:
 
         uses: actions/deploy-pages@v4
 ```
-
-
-
 
 ## Nueva Versión
 
@@ -154,5 +151,6 @@ jobs:
       - name: Desplegar en GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
 ```
