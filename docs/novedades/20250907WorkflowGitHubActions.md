@@ -1,7 +1,7 @@
 ---
 title: "Documentación del Workflow de GitHub Actions y Python"
 date: 2025-09-07
-category: \["Automatización"]
+category: ["Automatización"]
 tags: ["github-actions", "workflow", "python", "documentacion", "automatizacion"]
 draft: false
 ---
