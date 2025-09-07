@@ -27,7 +27,7 @@ El script cumple varias funciones importantes:
 En resumen, el script `generate_index.py` no solo crea un índice de búsqueda, sino que **automatiza y simplifica un proceso crítico**. Sin esta herramienta, cada vez que agregaras un nuevo documento, tendrías que actualizar el índice de búsqueda manualmente, lo que sería un trabajo tedioso y propenso a errores. Gracias a este script, la búsqueda en tu sitio es siempre **rápida, precisa y autónoma**.
 
 ***generate\_index.py***
-```
+```python
 import os
 import json
 import re
