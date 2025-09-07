@@ -10,7 +10,7 @@ draft: false
 * Versión anterior y posterior actualización.
 
 ## Versión anterior
-```
+```yaml
 \# Simple workflow for deploying static content to GitHub Pages
 
 name: Deploy static content to Pages
@@ -93,7 +93,7 @@ jobs:
 
 ## Nueva Versión
 
-```
+```yaml
 # Workflow para desplegar contenido estático en GitHub Pages
 name: Desplegar contenido estático en Pages
 
